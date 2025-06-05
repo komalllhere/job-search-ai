@@ -7,7 +7,11 @@ Original file is located at
     https://colab.research.google.com/drive/1fGgeQOoKO9lJBoAi7mIbU48C4ZD66Q-P
 """
 
-!pip install -q langchain langchain-community requests
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "langchain", "langchain-community", "requests"])
+
 !pip install -q google-cloud-aiplatform
 
 !pip install -q google-cloud-aiplatform langchain-google-vertexai
